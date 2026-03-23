@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.iei.subject.model.dao.SubjectDao">
+	<select id="selectSubjectList" resultType="subject">
+		select * from subject_tbl 
+		where subject_title like '%'||#{searchKeyword}||'%'
+		<if test="category != 0">
+		and subject_category = #{category}
+		</if>
+		<if test="level != 0">
+		and subject_level = #{level}
+		</if>
+		<if test="sort == 0">
+		order by subject_no asc
+		</if>
+		<if test="sort == 1">
+		order by subject_no asc
+		</if>
+		<if test="sort == 2">
+		order by subject_level desc, subject_count asc
+		</if>
+		<if test="sort == 3">
+		order by subject_level asc, subject_count asc
+		</if>
+		<if test="sort ==4">
+		order by subject_count desc, subject_count asc
+		</if>
+		<if test="sort ==5">
+		order by subject_count asc, subject_count asc
+		</if>
+	</select>
+</mapper>
+
+	
+
+
+
+
+

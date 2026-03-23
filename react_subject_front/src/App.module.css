@@ -1,10 +1,136 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body {
   margin: 0;
 }
 .header {
   padding: 24px;
+  margin: 30px;
 }
 .header > h1 {
   margin: 0;
   text-align: center;
+  color: tomato;
+}
+.subject_item {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  display: flex;
+  padding: 16px 12px;
+  align-items: center;
+  border-bottom: none;
+}
+.subject_item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.main {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.item_wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.subject_list_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.title_ul {
+  display: flex;
+  list-style-type: none;
+  border: 1px solid #ccc;
+  padding: 16px 12px;
+  align-items: center;
+  background-color: bisque;
+  border-bottom: none;
+  color: tomato;
+  font-size: large;
+}
+
+.subject_no {
+  width: 15%;
+}
+.subject_title {
+  width: 30%;
+}
+.subject_instructor {
+  width: 15%;
+}
+.subject_category {
+  width: 15%;
+}
+.subject_level {
+  width: 10%;
+}
+.subject_count {
+  width: 15%;
+}
+li {
+  text-align: center;
+}
+.option_wrap {
+  border: 1px solid #ccc;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-height: 350px;
+  border-radius: 8px;
+}
+.search_wrap {
+  display: flex;
+  gap: 4px;
+  padding: 12px;
+}
+.search_wrap > input {
+  border: none;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  padding: 4px;
+  border-radius: 4px;
+}
+.search_wrap > button {
+  border: none;
+  background-color: bisque;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search_wrap > button:hover {
+  filter: brightness(1.05);
+}
+.option_title {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+.select {
+  border: none;
+  border-bottom: 1px solid #eee;
+  margin: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: tomato;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.btn_wrap {
+  padding: 12px;
+}
+.btn_wrap > button {
+  width: 100%;
+  border: none;
+  background-color: bisque;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn_wrap > button:hover {
+  filter: brightness(1.05);
 }
